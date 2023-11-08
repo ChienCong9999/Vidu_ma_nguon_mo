@@ -1,0 +1,36 @@
+import tkinter as tk
+
+def hoc_ly_thuyet():
+    # Hiển thị lý thuyết và ví dụ
+    pass
+
+def giai_phuong_trinh():
+    # Cung cấp công cụ giải phương trình
+    pass
+
+def tao_bai_giang():
+    # Tạo và chỉnh sửa bài giảng
+    pass
+
+def tao_bai_kiem_tra():
+    # Tạo bài kiểm tra và kiểm tra định kỳ
+    pass
+
+# Tạo cửa sổ giao diện
+root = tk.Tk()
+root.title("Ứng dụng Học Giải tích")
+
+# Tạo các nút chức năng
+ly_thuyet_button = tk.Button(root, text="Học Lý thuyết", command=hoc_ly_thuyet)
+ly_thuyet_button.pack()
+
+giai_phuong_trinh_button = tk.Button(root, text="Giải Phương trình", command=giai_phuong_trinh)
+giai_phuong_trinh_button.pack()
+
+tao_bai_giang_button = tk.Button(root, text="Tạo Bài giảng", command=tao_bai_giang)
+tao_bai_giang_button.pack()
+
+tao_bai_kiem_tra_button = tk.Button(root, text="Tạo Bài kiểm tra", command=tao_bai_kiem_tra)
+tao_bai_kiem_tra_button.pack()
+
+root.mainloop()
