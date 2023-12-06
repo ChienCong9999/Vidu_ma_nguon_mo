@@ -1,0 +1,32 @@
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+def tach_bienn_anh(image_path):
+    # Đọc ảnh từ đường dẫn
+    image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+
+    # Sử dụng phương pháp Canny để tách biên
+    edges = cv2.Canny(image, 50, 150)
+
+    return edges
+
+def main():
+    # Đường dẫn của ảnh
+    image_path = 'path/to/your/image.jpg'
+
+    # Thực hiện tách biên
+    edges = tach_bienn_anh(image_path)
+
+    # Hiển thị ảnh gốc và ảnh tách biên
+    original_image = cv2.imread(image_path)
+    plt.subplot(121), plt.imshow(original_image, cmap='gray')
+    plt.title('Ảnh gốc'), plt.xticks([]), plt.yticks([])
+
+    plt.subplot(122), plt.imshow(edges, cmap='gray')
+    plt.title('Ảnh tách biên'), plt.xticks([]), plt.yticks([])
+
+    plt.show()
+
+if __name__ == "__main__":
+    main()
